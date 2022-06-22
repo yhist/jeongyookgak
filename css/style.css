@@ -1,0 +1,659 @@
+@charset 'utf-8';
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 700;
+  src: local('Spoqa Han Sans Bold'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2') format('woff2'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 400;
+  src: local('Spoqa Han Sans Regular'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff2') format('woff2'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff') format('woff'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 300;
+  src: local('Spoqa Han Sans Light'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.woff2') format('woff2'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.woff') format('woff'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 100;
+  src: local('Spoqa Han Sans Thin'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansThin.woff2') format('woff2'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansThin.woff') format('woff'),
+  url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansThin.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline-style: none; */
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Spoqa Han Sans,"Sans-serif";
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.32;
+  line-height: 1.0;
+}
+
+/* 공통(재사용) */
+.inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+
+/* 전체 레이아웃 */
+/* top-ad */
+
+/* header */
+.header {
+  position: relative;
+  display: block;
+  background-color: #000;
+}
+.header a {
+  color: #fff;
+}
+
+.header .inner {
+  height: 96px;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  background: url(../images/logo.svg) no-repeat center;
+  background-size: contain;
+  width: 129px;
+  height: 48px;
+  font-size: 0;
+}
+
+.menu {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 240px;
+  height: 18px;
+}
+
+.menu > ul {
+  position: relative;
+  display: block;
+}
+
+.menu > ul > li {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.menu > ul > li a {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.member {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: block;
+  width: 386px;
+  height: 48px;
+}
+.r-manu > ul {
+  position: relative;
+  display: block;
+  float: left;
+  margin-top: 18px;
+
+}
+.r-manu > ul > li {
+  position: relative;
+  display: block;
+  float: left;
+}
+.r-manu > ul > li a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  margin-right: 12px;
+  /* line-height: 18px; */
+}
+
+.member-line{
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 18px;
+  float: left;
+  border-right: 1px solid#fff;
+  margin: 15px 15px 0 0;
+}
+
+.l-manu > ul {
+  position: relative;
+  display: block;
+  float: left;
+  margin-top: 18px;
+
+}
+.l-manu > ul > li {
+  position: relative;
+  display: block;
+  float: left;
+}
+.l-manu > ul > li a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  margin-right: 12px;
+  /* line-height: 18px; */
+}
+
+.icons {
+  position: absolute;
+  right: 0;
+  display: block;
+  font-size: 0;
+}
+.icons-1 {
+  position:relative;
+  display: block;
+  background: url(../images/다운로드.png) no-repeat center;
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+.icons-2 {
+  position: relative;
+  display: block;
+  background: url(../images/햄버거.png) no-repeat center;
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+
+
+/* visual */
+.visual a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 560px;
+  background: url(../images/main_firstgift_logout.29ecc8b.png)no-repeat center;
+  background-size: cover;
+}
+
+
+/* infom */
+.infom {
+  position: relative;
+  display: block;
+}
+.sw-infom {
+  position: relative;
+  display: block;
+  height: 182px;
+  margin-top: 63px;
+}
+.sw-infom a {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+.sw-infom-1 {
+  background: url(../images/banner1.png) no-repeat center;
+  background-size: contain;
+  height: 176px;
+}
+.sw-infom-2 {
+  background: url(../images/banner2.png) no-repeat center;
+  background-size: contain;
+}
+.sw-infom-3 {
+  background: url(../images/banner3.png) no-repeat center;
+  background-size: contain;
+}
+.sw-infom-4 {
+  background: url(../images/banner4.png) no-repeat center;
+  background-size: contain;
+}
+.sw-infom-5 {
+  background: url(../images/banner5.png) no-repeat center;
+  background-size: contain;
+}
+.sw-infom-6 {
+  background: url(../images/banner6.png) no-repeat center;
+  background-size: contain;
+}
+.sw-infom-7 {
+  background: url(../images/banner7.png) no-repeat center;
+  background-size: contain;
+}
+
+.r-infom a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+
+  background: url(../images/freshplan.9fe4775.png) no-repeat center;
+  background-color: #fff;
+  z-index: 999;
+}
+
+/* items */
+.items {
+  position: relative;
+  display: block;
+}
+.items .inner {
+  position: relative;
+  display: block;
+  margin-top: 80px;
+}
+.items .inner h2 {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+.best-items {
+  position: relative;
+  display: block;
+}
+.best-items li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0 29px 60px 0;
+}
+.best-items li:nth-child(3) {
+  margin:0;
+}
+.best-items li:nth-child(6) {
+  margin: 0;
+}
+.best-items-pic {
+  position: relative;
+  display: block;
+  width: 375px;
+  height: 416px;
+  background-color: #f9f7f8;
+}
+.best-items-pic-free {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: block;
+  width: 75px;
+  height: 30px;
+  background: url(../images/무항생제.svg) no-repeat center;
+  background-size: contain;
+}
+.best-items-pic-bg{
+  position: absolute;
+  left: 11%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 276px;
+  height: 276px;
+  background: url(../images/porkbelly-fresh-list-1.png) no-repeat center;
+  background-size: contain;
+}
+.best-items li:nth-child(2) .best-items-pic-bg{
+  background: url(../images/chickef-cut-list-2.png) no-repeat center;
+  width: 276px;
+  height: 276px;
+  background-size: contain;
+}
+.best-items li:nth-child(3) .best-items-pic-bg{
+  background: url(../images/porkcutlet-sirloin-list-3.png) no-repeat center;
+  width: 276px;
+  height: 276px;
+  background-size: contain;
+}
+.best-items li:nth-child(4) .best-items-pic-bg{
+  background: url(../images/egg-fresh-list-4.png) no-repeat center;
+  width: 276px;
+  height: 276px;
+  background-size: contain;
+}
+.best-items li:nth-child(5) .best-items-pic-bg{
+  background: url(../images/milk-fresh-list-5.png) no-repeat center;
+  width: 276px;
+  height: 276px;
+  background-size: contain;
+}
+.best-items li:nth-child(6) .best-items-pic-bg{
+  background: url(../images/baby-hanuround-bmix-list-6.png) no-repeat center;
+  width: 276px;
+  height: 276px;
+  background-size: contain;
+}
+.best-items-pic-btn{
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url(../images/카트\ 아이콘.svg) no-repeat center #fff;
+  background-size: contain;
+  border: 1px solid #EEEEEE;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 25px 10px -15px
+  ;
+}
+
+
+
+.best-items-p {
+  position: relative;
+  display: block;
+}
+.best-items li a p:first-child {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 20px;
+}
+.best-items li a p:last-child {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+
+/* shopping */
+.shopping {
+  position: relative;
+  display: block;
+}
+.shopping .inner {
+  position: relative;
+  display: block;
+  width: 93%;
+  height: 208px;
+  background: url(../images/banner_shop.96086e0.png)no-repeat center;
+  background-size: cover;
+}
+
+/* footer */
+.footer {
+  position: relative;
+  display: block;
+  margin-top: 150px;
+  background-color: #fff;
+  border-top: 1px solid #BDBDBD;
+}
+.footer-top {
+  position: relative;
+  display: block;
+  /* height: 63px; */
+  padding: 25px 0;
+}
+.footer-top-right {
+  position: relative;
+  display: block;
+}
+.footer-top-right a {
+  position: relative;
+  display: inline-block;
+  margin-right: 23px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer-top-right a strong {
+  position: relative;
+  display: inline-block;
+  margin-right: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.footer-top-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+.footer-top-icon button {
+  position: relative;
+  display: block;
+  width: 128px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fafafa;
+  padding: 10px 0;
+  float: left;
+  margin-right: 25px;
+}
+.footer-top-icon button span {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/phone_icon.svg) no-repeat center;
+  background-size: cover;
+  float: left;
+}
+.footer-top-icon button p {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #212121;
+  text-align: center;
+  line-height: 25px;
+  float: left;
+}
+.footer-icon-kakao {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon_kakao.svg) no-repeat center;
+  background-size: cover;
+  float: left;
+  margin-right: 18px;
+  margin-top: 15px;
+}
+.footer-icon-insta {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon_insta.svg) no-repeat center;
+  background-size: cover;
+  float: left;
+  margin-top: 15px;
+}
+
+hr {
+  border-top: 1px solid #EEEEEE;
+}
+.footer-bottom {
+  position: relative;
+  display: block;
+  height: 203px;
+}
+.footer-bottom-main {
+  position: relative;
+  display: block;
+  float: left;
+}
+.footer-bottom-logo {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 32px;
+  background: url('../images/footer_logo.svg') no-repeat center;
+  background-size: cover;
+  margin-top: 16px;
+}
+.footer-bottom-info{
+  position: relative;
+  display: block;
+  margin-top: 16px;
+}
+.footer-bottom-info div {
+  position: relative;
+  display: block;
+}
+.footer-bottom-info span {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #212121;
+  margin-right: 8px;
+  line-height: 25px;
+  float: left;
+}
+.footer-bottom-info a {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #4bb8ce;
+  padding-right: 3px;
+  cursor: pointer;
+}
+.footer-bottom-main p {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  color: #212121;
+  padding-top: 30px;
+}
+
+
+
+.footer-bottom-cs {
+  position: relative;
+  display: block;
+  float: right;
+  text-align: right;
+  float: right;
+}
+
+.footer-bottom-cs h6 {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  margin-top: 13px;
+}
+.footer-bottom-cs h3 {
+  position: relative;
+  display: block;
+  font-size: 24px;
+}
+.footer-bottom-cs-time {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  color: #757575;
+}
+.footer-bottom-cs-main {
+  position: relative;
+  display: block;
+  margin-top: 9px;
+}
+.footer-bottom-cs-main p {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.footer-bottom-cs-main span a {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  color: #4bb8ce;
+}
+.footer-bottom-cs button {
+  position: relative;
+  display: block;
+  width: 88px;
+  height: 32px;
+  font-size: 13px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #212121;
+  margin-right: 8px;
+  margin-top: 5px;
+  float: left;
+  cursor: pointer;
+}
+.footer-bottom-cs button:last-child {
+  margin-right: 0;
+}
+
+
+
+
+
+
+
