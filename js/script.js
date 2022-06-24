@@ -13,5 +13,20 @@ window.onload = function () {
       el: '.sw-infom-pg',
       type: 'fraction'
     }
+  });
+
+  $(window).scroll(function(){
+    let header = $('.header');
+    let temp = $(window).scrollTop();
+    if (temp > 0){
+      header.addClass('header-fix');
+    }
+    if (temp == 0){
+      header.removeClass('header-fix');
+    }
   })
-}
+
+
+
+
+};
