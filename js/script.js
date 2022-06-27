@@ -24,9 +24,24 @@ window.onload = function () {
     if (temp == 0){
       header.removeClass('header-fix');
     }
-  })
+  });
 
+  // 모바일 메뉴 보이기 기능
+  let icons_2 = $('.icons-2'); 
+  icons_2.click(function (event) {
+    event.preventDefault();
+    mb_wrap.show();
+    mb_wrap.addClass('mb-wrap-open')
+  });
 
-
+  // 모바일 메뉴 숨기기 기능
+  let mb_close = $('.mb-close');
+  let mb_wrap = $('.mb-wrap');
+  mb_close.click(function (event) {
+    event.preventDefault();
+    mb_wrap.hide();
+    mb_submenu.hide();
+    mb_wrap.removeClass('mb-wrap-open');
+  });
 
 };
