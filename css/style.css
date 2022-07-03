@@ -98,10 +98,12 @@ body {
   background-color: #fff;
   box-shadow: 0 0 50px 0 rgb(0 0 0 / 30%);
   z-index: 999999;
+  transition: all 0.5s;
 }
 
 .mb-wrap-open {
   right: 0;
+  /* transition: all 0.5s; */
 }
 
 .mb-top {
@@ -126,6 +128,7 @@ body {
   background: url('../images/X_icons.svg') no-repeat center;
   background-size: cover;
   float: right;
+  transition: all 0.5s;
 }
 
 .mb-cart {
@@ -150,6 +153,7 @@ body {
   font-size: 18px;
   margin-left: 25px;
   margin-right: 16px;
+  margin-bottom: 20px;
 }
 
 .mb-shopping-icon {
@@ -163,15 +167,21 @@ body {
   width: 104px;
   height: 104px;
   padding: 24px;
-  margin-right: 16px;
+  margin-left: 16px;
+  margin-top: 10px;
   float: left;
+}
+.mb-shopping-icon li:hover {
+  border-radius: 8px;
+  background-color: hsla(0,0%,88%,.29);
 }
 
 .mb-shopping-icon li a {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: block;
   text-align: center;
-  margin-top: 8px;
   font-size: 18px;
 }
 
@@ -237,6 +247,7 @@ body {
   display: block;
   width: 60px;
   height: 60px;
+  cursor: pointer;
 }
 
 @media all and (max-width:1100px) {
@@ -455,7 +466,10 @@ body {
     height: 50%;
   }
 
-  .menu, .r-manu, .member-line, .l-manu {
+  .menu,
+  .r-manu,
+  .member-line,
+  .l-manu {
     display: none;
   }
 }
@@ -612,6 +626,7 @@ body {
     padding-top: 5.32vw;
   }
 }
+
 @media all and (max-width:800px) {
   .sw-infom a .r-infom a {
     display: block;
@@ -619,19 +634,34 @@ body {
     /* max-width: 1000px; */
     height: 30vw;
   }
-}
-@media all and (max-width:750px) {
-  .sw-infom{
+
+  .sw-infom {
     display: block;
     width: 100%;
     /* margin-bottom: 10px; */
   }
+
   .r-infom a {
     display: block;
     width: 100%;
     /* margin-top: 35px; */
     /* background-size: cover; */
   }
+
+  .sw-infom-control {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+  }
+
+  .sw-infom-pg {
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+  }
+
 }
 
 /* items */
@@ -764,7 +794,6 @@ body {
   background-color: #000;
 }
 
-
 .best-items-p {
   position: relative;
   display: block;
@@ -785,6 +814,76 @@ body {
   padding-top: 10px;
 }
 
+/* imems 반응형 */
+@media all and (max-width:1184px) {
+
+  .best-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .best-items-pic {
+    height: 35.13vw;
+  }
+
+  .best-items-pic-free {
+    height: 2.53vw;
+  }
+
+  .best-items li .best-items-pic-bg {
+    height: 23.31vw;
+  }
+
+  .best-items li:nth-child(2) .best-items-pic-bg {
+    height: 23.31vw;
+  }
+
+  .best-items li:nth-child(3) .best-items-pic-bg {
+    height: 23.31vw;
+  }
+
+  .best-items li:nth-child(4) .best-items-pic-bg {
+    height: 23.31vw;
+  }
+
+  .best-items li:nth-child(5) .best-items-pic-bg {
+    height: 23.31vw;
+  }
+
+  .best-items li:nth-child(6) .best-items-pic-bg {
+    height: 23.31vw;
+  }
+
+  .best-items-pic-btn {
+    height: 60px;
+    width: 60px;
+  }
+
+}
+
+@media all and (max-width:810px) {
+  .items .inner h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .best-items li:nth-child(3) {
+    margin: 0 29px 60px 0;
+  }
+  
+  .best-items li:nth-child(6) {
+    margin: 0 29px 60px 0;
+  }
+  .best-items-pic-free {
+    width: 75px;
+    height: 30px;
+  }
+}
+
 
 /* shopping */
 .shopping {
@@ -799,6 +898,14 @@ body {
   height: 208px;
   background: url(../images/banner_shop.96086e0.png)no-repeat center;
   background-size: cover;
+}
+
+/* shopping 반응형 */
+@media all and (max-width: 1184px) {
+  .shopping .inner {
+    margin-top: 30px;
+    height: 17.5vw;
+  }
 }
 
 /* footer */
@@ -1032,4 +1139,31 @@ hr {
 
 .footer-bottom-cs button:last-child {
   margin-right: 0;
+}
+
+/* footer 반응형 */
+@media all and (max-width:1184px) {
+  .footer {
+    margin-top: 12vw;
+  }
+}
+
+@media all and (max-width:700px) {
+  .footer-top {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .footer-bottom-main {
+    display: none;
+  }
+
+  .footer-bottom-cs {
+    display: block;
+    position: absolute;
+    left: 0;
+    text-align: left;
+    margin-left: 30px;
+  }
+
 }

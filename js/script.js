@@ -30,7 +30,7 @@ window.onload = function () {
   icons_2.click(function (event) {
     event.preventDefault();
     mb_wrap.show();
-    mb_wrap.addClass('mb-wrap-open')
+    mb_wrap.addClass('mb-wrap-open');
   });
 
   // 모바일 메뉴 숨기기 기능
