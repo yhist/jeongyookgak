@@ -1,289 +1,364 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/favicon16.png" sizes="16x16" />
+    <link rel="icon" href="images/favicon32.png" sizes="32x32" />
+    <link rel="icon" href="images/favicon192.png" sizes="192x192" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정육각 :: 언제나 초신선</title>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel=icon href="images/favicon16.png" sizes=16x16>
-  <link rel=icon href="images/favicon32.png" sizes=32x32>
-  <link rel=icon href="images/favicon192.png" sizes=192x192>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>정육각 :: 언제나 초신선</title>
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+      integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- 조건실행 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="js/swiper/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="js/swiper/swiper.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="js/swiper/swiper.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
-</head>
-
-<body>
-  <!-- 모바일 메뉴 만들기 -->
-  <div class="mb-wrap">
-    <div class="mb-top clearfix">
-      <h2>메뉴</h2>
-      <a href="#" class="mb-close"></a>
-      <a href="#" class="mb-cart"></a>
-    </div>
-    <div class="mb-shopping">
-      <span>쇼핑하기</span>
-      <ul class="mb-shopping-icon clearfix">
-        <li><a href="#"><img src="images/pig.svg" alt="돼지">돼지</a></li>
-        <li><a href="#"><img src="images/cow.svg" alt="소">소</a></li>
-        <li><a href="#"><img src="images/chicken.svg" alt="닭">닭</a></li>
-        <li><a href="#"><img src="images/fish.svg" alt="수산">수산</a></li>
-        <li><a href="#"><img src="images/spoon.svg" alt="밀키트">밀키트</a></li>
-        <li><a href="#"><img src="images/milk.svg" alt="우유">우유</a></li>
-        <li><a href="#"><img src="images/egg.svg" alt="달걀">달걀</a></li>
-        <li><a href="#"><img src="images/baby.svg" alt="이유식">이유식</a></li>
-      </ul>
-    </div>
-    <div class="mb-bar"></div>
-    <div class="mb-bottom">
-      <a href="#">브랜드스토리</a>
-      <a href="#">이용가이드</a>
-      <a href="#">공지사항</a>
-      <a href="#">고객센터</a>
-      <a href="#">마이페이지</a>
-    </div>
-  </div>
-
-
-  <!-- top-ad -->
-  <div class="topad">
-    <div class="inner">
-      <a href="#"></a>
-      <div class="topad-close"></div>
-    </div>
-  </div>
-  <!-- 전체 레이아웃 -->
-  <div class="wrap">
-    <!-- header -->
-    <header class="header">
-      <div class="inner">
-        <a href="#" class="logo">정육각</a>
-        <div class="menu">
-          <ul class="clearfix">
-            <li><a href="#">쇼핑하기</a></li>
-            <li><a href="#">배송안내</a></li>
-            <li><a href="#">이벤트</a></li>
-          </ul>
+  <body>
+    <!-- 안내창 -->
+    <div class="modal-wrap">
+      <div class="modal-main">
+        <div class="modal-icon">
+          <i class="fas fa-exclamation-triangle"></i>
         </div>
-        <div class="member clearfix">
-          <div class="r-manu">
-            <ul class="clearfix">
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">고객센터</a></li>
-            </ul>
-          </div>
-          <div class="member-line"></div>
-          <div class="l-manu">
-            <ul class="clearfix">
-              <li><a href="#">로그인</a></li>
-              <li><a href="#">회원가입</a></li>
-            </ul>
-          </div>
-          <div class="icons clearfix">
-            <a href="#" class="icons-1">장바구니</a>
-            <a href="#" class="icons-2">더보기메뉴</a>
+        <h1>STX 건설 클론코딩</h1>
+        <p>
+          이 사이트는 <strong>스터디용으로 제작</strong>되었으며 <br />
+          <strong>모든 리소스의 저작권은 원저작자</strong>에게 있습니다. <br />
+        </p>
+
+        <div class="modal-bottom">
+          <span>* 본 사이트는 Chrome 에 최적화되어 있습니다.</span>
+          <span
+            >*해당 사이트 관련 문제사항이 있을시 연락해주시면
+            삭제하겠습니다.</span
+          >
+          <div class="modal-bottom-icon">
+            <a href="mailto:ehdusgml0903@naver.com" target="_blank"
+              ><i class="far fa-envelope"></i
+            ></a>
+            <a href="https://open.kakao.com/o/sXrenCHe" target="_blank"
+              ><i class="far fa-comments"></i
+            ></a>
+            <a href="https://github.com/yhist" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
           </div>
         </div>
+
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-    </header>
-    <!-- visual -->
-    <section class="visual">
-      <div><a href="#"></a></div>
-    </section>
-    <!-- infom -->
-    <section class="infom clearfix">
-      <div class="inner">
-        <div class="swiper-container sw-infom">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#" class="sw-infom-1"></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="sw-infom-2"></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="sw-infom-3"></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="sw-infom-4"></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="sw-infom-5"></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="sw-infom-6"></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="sw-infom-7"></a>
-            </div>
-          </div>
-          <div class="sw-infom-control">
-            <!-- 슬라이드 좌우버튼 -->
-            <button class="sw-infom-prev">
-            </button>
-            <button class="sw-infom-next">
-            </button>
-            <!-- Pagination -->
-            <div class="sw-infom-pg"></div>
-          </div>
-        </div>
-        <div class="r-infom"><a href="#"></a></div>
+    </div>
+
+    <!-- 모바일 메뉴 만들기 -->
+    <div class="mb-wrap">
+      <div class="mb-top clearfix">
+        <h2>메뉴</h2>
+        <a href="#" class="mb-close"></a>
+        <a href="#" class="mb-cart"></a>
       </div>
-    </section>
-    <!-- items -->
-    <section class="items">
-      <div class="inner">
-        <h2>정육각 베스트 상품</h2>
-        <ul class="best-items clearfix">
+      <div class="mb-shopping">
+        <span>쇼핑하기</span>
+        <ul class="mb-shopping-icon clearfix">
           <li>
-            <div class="best-items-pic">
-              <div><a href="#" class="best-items-pic-bg"></a></div>
-              <a href="#" class="best-items-pic-btn"></a>
-            </div>
-            <a href="#" class=".best-items-p">
-              <p>초신선 돼지 삼겹살 구이용</p>
-              <p>기준가 23,400원/600g</p>
-            </a>
+            <a href="#"><img src="images/pig.svg" alt="돼지" />돼지</a>
           </li>
           <li>
-            <div class="best-items-pic">
-              <div><a href="#" class="best-items-pic-bg"></a></div>
-              <a href="#" class="best-items-pic-btn"></a>
-            </div>
-
-            <a href="#" class=".best-items-p">
-              <p>초신선 닭볶음탕</p>
-              <p>기준가 6,700원/950g</p>
-            </a>
+            <a href="#"><img src="images/cow.svg" alt="소" />소</a>
           </li>
           <li>
-            <div class="best-items-pic">
-              <div><a href="#" class="best-items-pic-bg"></a></div>
-              <a href="#" class="best-items-pic-btn"></a>
-            </div>
-
-            <a href="#" class=".best-items-p">
-              <p>초신선 등심 돈까스</p>
-              <p>기준가 11,800원/770g</p>
-            </a>
+            <a href="#"><img src="images/chicken.svg" alt="닭" />닭</a>
           </li>
           <li>
-            <div class="best-items-pic">
-              <div class="best-items-pic-free"></div>
-              <div><a href="#" class="best-items-pic-bg"></a></div>
-              <a href="#" class="best-items-pic-btn"></a>
-            </div>
-
-            <a href="#" class=".best-items-p">
-              <p>초신선 동물복지 무항생제 유정란</p>
-              <p>기준가 7,800원/12구</p>
-            </a>
+            <a href="#"><img src="images/fish.svg" alt="수산" />수산</a>
           </li>
           <li>
-            <div class="best-items-pic">
-              <div class="best-items-pic-free"></div>
-              <div><a href="#" class="best-items-pic-bg"></a></div>
-              <a href="#" class="best-items-pic-btn"></a>
-            </div>
-
-            <a href="#" class=".best-items-p">
-              <p>초신선 무항생제 우유</p>
-              <p>기준가 23,400원/600g</p>
-            </a>
+            <a href="#"><img src="images/spoon.svg" alt="밀키트" />밀키트</a>
           </li>
           <li>
-            <div class="best-items-pic">
-              <div class="best-items-pic-free"></div>
-              <div><a href="#" class="best-items-pic-bg"></a></div>
-              <a href="#" class="best-items-pic-btn"></a>
-            </div>
-
-            <a href="#" class=".best-items-p">
-              <p>초신선 무항생제 이유식용 한우 우둔 다짐육</p>
-              <p>기준가 15,300원/180g</p>
-            </a>
+            <a href="#"><img src="images/milk.svg" alt="우유" />우유</a>
+          </li>
+          <li>
+            <a href="#"><img src="images/egg.svg" alt="달걀" />달걀</a>
+          </li>
+          <li>
+            <a href="#"><img src="images/baby.svg" alt="이유식" />이유식</a>
           </li>
         </ul>
       </div>
-    </section>
-    <!-- shopping -->
-    <section class="shopping">
-      <a href="#">
-        <div class="inner"></div>
-      </a>
-    </section>
-    <!-- footer -->
-    <footer class="footer">
-      <div class="inner">
-        <div class="footer-top">
-          <div class="footer-top-right">
-            <a href="#">인재채용</a>
-            <a href="#">이용약관</a>
-            <a href="#"><strong>개인정보처리방침</strong></a>
-          </div>
-          <div class="footer-top-icon clearfix">
-            <button class="clearfix">
-              <span></span>
-              <p>정육각 앱 설치</p>
-            </button>
-            <a href="#">
-              <span class="footer-icon-kakao"></span>
-            </a>
-            <a href="#">
-              <span class="footer-icon-insta"></span>
-            </a>
-          </div>
-          <a href=""></a>
-        </div>
+      <div class="mb-bar"></div>
+      <div class="mb-bottom">
+        <a href="#">브랜드스토리</a>
+        <a href="#">이용가이드</a>
+        <a href="#">공지사항</a>
+        <a href="#">고객센터</a>
+        <a href="#">마이페이지</a>
       </div>
-      <hr>
-      <div class="inner">
-        <div class="footer-bottom clearfix">
-          <!-- footer-left-cs -->
-          <div class="footer-bottom-main">
-            <div class="footer-bottom-logo"></div>
-            <div class="footer-bottom-info clearfix">
-              <div>
-                <span>(주)정육각</span><span>대표이사:김재연</span><span>|</span><span>주소:경기도 김포시 고촌읍 아라육로57번길 126</span>
-              </div>
-              <div>
-                <span>사업자등록번호:224-87-00271</span><span><a
-                    href="#">[조회]</a></span><span>|</span><span>통신판매업신고번호:2021-경기김포-0668</span>
-              </div>
-              <div>
-                <span>개인정보관리책임자:박준태(privacy@yookgak.com)</span>
-              </div>
-            </div>
-            <p>© 2021 Jeongyookgak Inc. All rights reserved.</p>
-          </div>
-          <!-- footer-right-cs -->
-          <div class="footer-bottom-cs">
-            <h6>고객센터</h6>
-            <h3>1800-0658</h3>
-            <p class="footer-bottom-cs-time">
-              평일: 08:30 - 17:30 <br>
-              점심: 12:30 - 13:30 <br>
-              (토, 일 및 공휴일 휴무)
-            </p>
-            <div class="footer-bottom-cs-main clearfix">
-              <p>카카오톡:<span><a href="#">@정육각</a></span></p>
-              <p>이메일:<span><a href="#">help@yookgak.com</a></span></p>
-            </div>
-            <button>자주묻는질문</button>
-            <button>1:1 문의</button>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-</body>
+    </div>
 
+    <!-- top-ad -->
+    <div class="topad">
+      <div class="inner">
+        <a href="#"></a>
+        <div class="topad-close"></div>
+      </div>
+    </div>
+    <!-- 전체 레이아웃 -->
+    <div class="wrap">
+      <!-- header -->
+      <header class="header">
+        <div class="inner">
+          <a href="#" class="logo">정육각</a>
+          <div class="menu">
+            <ul class="clearfix">
+              <li><a href="#">쇼핑하기</a></li>
+              <li><a href="#">배송안내</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
+          </div>
+          <div class="member clearfix">
+            <div class="r-manu">
+              <ul class="clearfix">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">고객센터</a></li>
+              </ul>
+            </div>
+            <div class="member-line"></div>
+            <div class="l-manu">
+              <ul class="clearfix">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+              </ul>
+            </div>
+            <div class="icons clearfix">
+              <a href="#" class="icons-1">장바구니</a>
+              <a href="#" class="icons-2">더보기메뉴</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- visual -->
+      <section class="visual">
+        <div><a href="#"></a></div>
+      </section>
+      <!-- infom -->
+      <section class="infom clearfix">
+        <div class="inner">
+          <div class="swiper-container sw-infom">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="sw-infom-1"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="sw-infom-2"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="sw-infom-3"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="sw-infom-4"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="sw-infom-5"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="sw-infom-6"></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="sw-infom-7"></a>
+              </div>
+            </div>
+            <div class="sw-infom-control">
+              <!-- 슬라이드 좌우버튼 -->
+              <button class="sw-infom-prev"></button>
+              <button class="sw-infom-next"></button>
+              <!-- Pagination -->
+              <div class="sw-infom-pg"></div>
+            </div>
+          </div>
+          <div class="r-infom"><a href="#"></a></div>
+        </div>
+      </section>
+      <!-- items -->
+      <section class="items">
+        <div class="inner">
+          <h2>정육각 베스트 상품</h2>
+          <ul class="best-items clearfix">
+            <li>
+              <div class="best-items-pic">
+                <div><a href="#" class="best-items-pic-bg"></a></div>
+                <a href="#" class="best-items-pic-btn"></a>
+              </div>
+              <a href="#" class=".best-items-p">
+                <p>초신선 돼지 삼겹살 구이용</p>
+                <p>기준가 23,400원/600g</p>
+              </a>
+            </li>
+            <li>
+              <div class="best-items-pic">
+                <div><a href="#" class="best-items-pic-bg"></a></div>
+                <a href="#" class="best-items-pic-btn"></a>
+              </div>
+
+              <a href="#" class=".best-items-p">
+                <p>초신선 닭볶음탕</p>
+                <p>기준가 6,700원/950g</p>
+              </a>
+            </li>
+            <li>
+              <div class="best-items-pic">
+                <div><a href="#" class="best-items-pic-bg"></a></div>
+                <a href="#" class="best-items-pic-btn"></a>
+              </div>
+
+              <a href="#" class=".best-items-p">
+                <p>초신선 등심 돈까스</p>
+                <p>기준가 11,800원/770g</p>
+              </a>
+            </li>
+            <li>
+              <div class="best-items-pic">
+                <div class="best-items-pic-free"></div>
+                <div><a href="#" class="best-items-pic-bg"></a></div>
+                <a href="#" class="best-items-pic-btn"></a>
+              </div>
+
+              <a href="#" class=".best-items-p">
+                <p>초신선 동물복지 무항생제 유정란</p>
+                <p>기준가 7,800원/12구</p>
+              </a>
+            </li>
+            <li>
+              <div class="best-items-pic">
+                <div class="best-items-pic-free"></div>
+                <div><a href="#" class="best-items-pic-bg"></a></div>
+                <a href="#" class="best-items-pic-btn"></a>
+              </div>
+
+              <a href="#" class=".best-items-p">
+                <p>초신선 무항생제 우유</p>
+                <p>기준가 23,400원/600g</p>
+              </a>
+            </li>
+            <li>
+              <div class="best-items-pic">
+                <div class="best-items-pic-free"></div>
+                <div><a href="#" class="best-items-pic-bg"></a></div>
+                <a href="#" class="best-items-pic-btn"></a>
+              </div>
+
+              <a href="#" class=".best-items-p">
+                <p>초신선 무항생제 이유식용 한우 우둔 다짐육</p>
+                <p>기준가 15,300원/180g</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- shopping -->
+      <section class="shopping">
+        <a href="#">
+          <div class="inner"></div>
+        </a>
+      </section>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="inner">
+          <div class="footer-top">
+            <div class="footer-top-right">
+              <a href="#">인재채용</a>
+              <a href="#">이용약관</a>
+              <a href="#"><strong>개인정보처리방침</strong></a>
+            </div>
+            <div class="footer-top-icon clearfix">
+              <button class="clearfix">
+                <span></span>
+                <p>정육각 앱 설치</p>
+              </button>
+              <a href="#">
+                <span class="footer-icon-kakao"></span>
+              </a>
+              <a href="#">
+                <span class="footer-icon-insta"></span>
+              </a>
+            </div>
+            <a href=""></a>
+          </div>
+        </div>
+        <hr />
+        <div class="inner">
+          <div class="footer-bottom clearfix">
+            <!-- footer-left-cs -->
+            <div class="footer-bottom-main">
+              <div class="footer-bottom-logo"></div>
+              <div class="footer-bottom-info clearfix">
+                <div>
+                  <span>(주)정육각</span><span>대표이사:김재연</span
+                  ><span>|</span
+                  ><span>주소:경기도 김포시 고촌읍 아라육로57번길 126</span>
+                </div>
+                <div>
+                  <span>사업자등록번호:224-87-00271</span
+                  ><span><a href="#">[조회]</a></span
+                  ><span>|</span
+                  ><span>통신판매업신고번호:2021-경기김포-0668</span>
+                </div>
+                <div>
+                  <span>개인정보관리책임자:박준태(privacy@yookgak.com)</span>
+                </div>
+              </div>
+              <p>© 2021 Jeongyookgak Inc. All rights reserved.</p>
+            </div>
+            <!-- footer-right-cs -->
+            <div class="footer-bottom-cs">
+              <h6>고객센터</h6>
+              <h3>1800-0658</h3>
+              <p class="footer-bottom-cs-time">
+                평일: 08:30 - 17:30 <br />
+                점심: 12:30 - 13:30 <br />
+                (토, 일 및 공휴일 휴무)
+              </p>
+              <div class="footer-bottom-cs-main clearfix">
+                <p>
+                  카카오톡:<span><a href="#">@정육각</a></span>
+                </p>
+                <p>
+                  이메일:<span><a href="#">help@yookgak.com</a></span>
+                </p>
+              </div>
+              <button>자주묻는질문</button>
+              <button>1:1 문의</button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
